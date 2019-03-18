@@ -1,0 +1,262 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #555;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(206, 206, 206);
+}
+
+#page{margin: 0 auto; padding: 0; position: relative;}
+
+/***************** Text *************************/
+
+h1{}
+h2{font-size: 3em;}
+h3{}
+h4{}
+
+p{font-size: 1.5em;}
+
+a{color: black;}
+a:visited{color: inherit;}
+
+/******************* Header with Nav ********************/
+
+header{
+    background-color: rgb(165, 165, 165);
+    height: 100px;
+}
+
+header a.logo{
+    position: absolute;
+    display: block;
+    height: 44px;
+    width: 200px;
+    background: url(../images/Logo.png) no-repeat;
+    z-index: 1;
+    
+}
+header a.logo span{display: none;}
+
+nav{
+    position: relative;
+    padding-top: 62px;
+}
+
+nav::after{content:""; display: block; clear: both;}
+
+nav a.mobile_menu{
+    width: 32px;
+    height: 32px;
+    background: url(../images/icon_menu.svg) no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 75%;
+    display: none;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li:hover{background-color: rgba(128, 128, 128, 0.5);}
+nav ul li:hover ul{display: block;}
+
+nav ul li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 125px;
+    position: relative;
+}
+
+.menu > a{color: white; background: rgb(136, 136, 136);}
+
+nav ul .menu .dropdown a:visited{color: white;}
+nav ul li a:hover{background-color: rgb(192, 192, 192);}
+
+nav ul ul{
+    position: absolute;
+    top: 100%;
+    background: rgba(128, 128, 128);
+    display: none;
+}
+
+/* Top level Nav */
+
+nav > ul{padding-left: 200px;}
+
+nav > ul > li{
+    float: left;
+}
+
+nav > ul > li > a{
+    padding: 10px 20px;
+    width: auto;
+}
+
+/**************** Main Content (sections) *******************/
+
+section{
+    text-align: center;
+}
+
+.front-image{
+    height: 500px;
+    width: 1200px;
+    border-radius: 5px;
+}
+
+section li{
+    list-style: none;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+}
+
+section li a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgba(170, 170, 170, 0.5);
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px black solid;
+    transition: all 0.8s ease;
+}
+section li a:hover{
+    background: rgba(197, 133, 133, 0.5);
+    margin: 5px 25px;
+    padding: 20px 30px;
+}
+
+
+
+/********* Footer **********/
+
+footer{
+    text-align: center;
+}
+
+
+/********** MEDIA QUERIES ************/
+
+@media screen and (max-width: 1250px){
+
+    .front-image{
+        height: 400px;
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+    .front-image{
+        height: 320px;
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 825px){
+
+    h2{font-size: 2.5em;}
+    p{font-size: 1.2em;}
+
+    nav > ul{
+        padding-left: 0px;
+    }
+    .front-image{
+        height: 256px;
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 670px){
+
+    /* Header and Nav */
+    header{
+        min-height: 100px;
+        height: auto;
+        background-color: rgba(167, 167, 167);
+    }
+    nav{
+        height: 0px;
+        overflow: hidden;
+    }
+
+    nav a.mobile_menu{display: block;}
+    .menu > a{
+        background-color: rgba(170, 170, 170, 0.5);
+        border: 2px black solid;
+        margin: 2px 0px;
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+    }
+
+    nav ul, nav ul ul{
+        display: block;
+        position: static;
+    }
+
+    nav ul li a{
+        width: auto;
+        display: block;
+    }
+
+    nav ul li ul li a{
+        background-color:none;
+        margin-top: 5px;
+        border: 1px rgba(255, 255, 255, 0.5) solid;
+        text-align: center;
+    }
+
+    nav > ul{
+        padding-bottom: 0; 
+        background-color: rgb(165, 165, 165); 
+        text-align: center;
+    }
+    nav > ul > li{
+        float: none;
+    }
+
+    ul.dropdown{
+       
+    }
+
+    /* Section */
+
+    .front-image{
+        height: 200px;
+        width: 512px;
+    }
+
+    .front-ul{
+        padding: 0px;
+    }
+
+    .front-ul li{
+        display: list-item;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+
+    .front-image{
+        height: 180px;
+        width:95%;
+    }
+}
+
+@media screen and (max-width: 430px){
+
+    .front-image{
+   
+    }
+}
