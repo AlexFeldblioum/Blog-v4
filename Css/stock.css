@@ -1,0 +1,29 @@
+/* Stock position breakdown section */
+#stock-breakdown{
+    text-align: center;
+}
+
+#stock-breakdown > div{
+    width: 50%;
+    margin-left: 25%;  
+}
+
+#stock-breakdown aside{
+    width: 33%;
+    float: left;
+    border-radius: 5px;
+    margin-left: 0.25%;
+}
+#stock-breakdown aside:after{content: ""; display: block; clear: both;}
+
+#breakdown-long{
+    background-color: rgba(94, 240, 94, 0.5);
+}
+
+#breakdown-short{
+    background-color: rgba(226, 71, 71, 0.5);
+}
+
+#breakdown-current{
+    background-color: rgba(112, 112, 240, 0.5);
+}
